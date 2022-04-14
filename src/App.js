@@ -1,12 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Weather from "./Weather.js";
 import Forecast from "./Forecast.js";
+import Locator from "./Locator";
 
 function App() {
   return (
     <div>
       <Weather />
+      <Locator />
       <Forecast />
       <div id="foot">
         <small>

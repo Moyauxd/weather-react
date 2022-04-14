@@ -41,8 +41,8 @@ hr {
 .navi {
   display: block;
   position: relative;
-  bottom: 68px;
-  left: 440px;
+  bottom: 240px;
+  left: 600px;
   border-radius: 4px;
   background: white;
   transform-origin: all 250ms;

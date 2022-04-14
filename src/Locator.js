@@ -5,7 +5,7 @@ export default function Locator() {
   return (
     <div>
       <button className="navi" id="navig">
-        <img src="./location-pointer.png" alt="locator" width="15px" />
+        <img src="./location.png" alt="locator" width="15px" />
       </button>
     </div>
   );
