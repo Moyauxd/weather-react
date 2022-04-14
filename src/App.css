@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background: #1c9cf6 !important;
+  font-family: "Bitter", serif !important;
+}
