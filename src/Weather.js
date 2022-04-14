@@ -6,6 +6,26 @@ export default function Weather() {
   let [city, Setcity] = useState("");
   let [message, SetMessage] = useState("");
 
+  const now = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[now.getDay()];
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  if (hour < 10) {
+    hour = "0" + hour;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
   function defaultCity() {
     let apiKey = "e6088b89f99f2de149aacc51020dcb25";
     let weatherUrls = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -65,7 +85,10 @@ export default function Weather() {
       </form>
       <div className="align">
         <div>San Antonio, Tx</div>
-        <span> Friday </span> <span>22:00 </span>
+        <span> {day} </span>{" "}
+        <span>
+          {hour}:{minutes}
+        </span>
         <div>
           <strong> 65° F</strong>
         </div>
