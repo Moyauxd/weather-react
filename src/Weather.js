@@ -63,10 +63,6 @@ export default function Weather() {
         />
         <input type="submit" value="🔍" className="submit" />
       </form>
-      <div className="currently" id="city">
-        {" "}
-        <br />{" "}
-      </div>
       <div className="align">
         <div>San Antonio, Tx</div>
         <span> Friday </span> <span>22:00 </span>
@@ -74,8 +70,8 @@ export default function Weather() {
           <strong> 65° F</strong>
         </div>
         <img src="./sun.png" width="65px" alt="sun" />
+        <div>{message}</div>
       </div>
-      <div>{message}</div>
       <hr />
     </div>
   );
