@@ -37,7 +37,8 @@
   }
 }
 body {
-  background: #1c9cf6 !important;
+  background-image: url("/public/back.jpg");
+  background-size: cover;
   font-family: "Bitter", serif !important;
 }
 #foot {
