@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherData from "./WeatherData";
-import FormattedDate from "./FormattedDate.js";
 
 export default function WeatherInfo(props) {
   const [city, Setcity] = useState(props.defaultCity);
@@ -13,6 +12,7 @@ export default function WeatherInfo(props) {
       ready: true,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
+      city: response.data.name,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -67,12 +67,12 @@ export default function WeatherInfo(props) {
               <img src="./location.png" alt="locator" width="15px" />
             </button>
           </div>
-          <div class="tempr">
+          <div className="tempr">
             {" "}
             <a href="#" id="fah">
               F
             </a>{" "}
-            <span class="vline"> </span>
+            <span className="vline"> </span>
             <a href="#" id="cel">
               C
             </a>

@@ -6,10 +6,14 @@ export default function WeatherData(props) {
   return (
     <div className="align">
       <div>
-        <h1>{props.defaultCity}</h1>
+        <h1> {props.info.city}</h1>
         <FormattedDate date={props.info.date} />
         <div>
-          <strong> {Math.round(props.info.temperature)}F°</strong>
+          <strong>
+            {" "}
+            {Math.round(props.info.temperature)}
+            <a href="/">F°</a>
+          </strong>
         </div>
         <div>{props.info.description}</div>
         <img src={props.info.icon} alt={props.info.description} />

@@ -11,7 +11,7 @@
 .submit {
   position: absolute;
   top: 40px;
-  left: 545px;
+  left: 825px;
   border: 1px solid rgba(0, 92, 97, 0.5);
   border-radius: 1px 10px 10px 1px;
   box-shadow: 2px 2px 2px rgba(0, 92, 97, 0.7);
@@ -41,8 +41,8 @@ hr {
 .navi {
   display: block;
   position: relative;
-  bottom: 68px;
-  left: 600px;
+  bottom: 305px;
+  left: 750px;
   border-radius: 4px;
   background: white;
   transform-origin: all 250ms;
@@ -61,4 +61,25 @@ hr {
 }
 .align {
   text-align: center;
+}
+#cel {
+  text-decoration: none;
+  border-left: 2px solid black;
+  padding-left: 2px;
+  color: black;
+  font-weight: bold;
+}
+#fah {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.tempr {
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+  bottom: 200px;
+  left: 85px;
+  color: black;
+  font-size: 14px;
 }
