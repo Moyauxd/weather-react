@@ -6,15 +6,15 @@
   margin: 40px auto;
   width: 350px;
   height: 28px;
-  box-shadow: 1px 1px 1px rgba(29, 113, 242, 0.7);
+  box-shadow: 1px 1px 1px rgba(0, 92, 97, 0.7);
 }
 .submit {
   position: absolute;
   top: 40px;
   left: 545px;
-  border: 1px solid rgba(29, 113, 242, 0.5);
+  border: 1px solid rgba(0, 92, 97, 0.5);
   border-radius: 1px 10px 10px 1px;
-  box-shadow: 2px 2px 2px rgba(29, 113, 242, 0.7);
+  box-shadow: 2px 2px 2px rgba(0, 92, 97, 0.7);
   transition: all 200ms;
 }
 .currently {
@@ -41,15 +41,15 @@ hr {
 .navi {
   display: block;
   position: relative;
-  bottom: 240px;
+  bottom: 68px;
   left: 600px;
   border-radius: 4px;
   background: white;
   transform-origin: all 250ms;
 }
 .navi:hover {
-  background: rgba(241, 146, 21, 0.5);
-  box-shadow: 2px 2px 2px rgba(29, 113, 242, 0.7);
+  background: rgba(0, 92, 97, 0.5);
+  box-shadow: 2px 2px 2px rgba(0, 92, 97, 0.7);
 }
 #date {
   text-align: center;
