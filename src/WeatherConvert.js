@@ -27,7 +27,7 @@ export default function WeatherConvert(props) {
       </div>
     );
   } else {
-    let celcius = props.fahrenheit - 32 - 5 / 9;
+    let celcius = ((props.fahrenheit - 32) * 5) / 9;
     return (
       <div c>
         <span className="conTempr">{Math.round(celcius)}</span>
