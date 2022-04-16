@@ -67,16 +67,7 @@ export default function WeatherInfo(props) {
               <img src="./location.png" alt="locator" width="15px" />
             </button>
           </div>
-          <div className="tempr">
-            {" "}
-            <a href="#" id="fah">
-              F
-            </a>{" "}
-            <span className="vline"> </span>
-            <a href="#" id="cel">
-              C
-            </a>
-          </div>
+          <div className="tempr"></div>
         </div>
       </div>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon.js";
+import WeatherConvert from "./WeatherConvert.js";
 
 export default function WeatherData(props) {
   return (
@@ -9,13 +10,7 @@ export default function WeatherData(props) {
       <div>
         <h1> {props.info.city}</h1>
         <FormattedDate date={props.info.date} />
-        <div>
-          <strong>
-            {" "}
-            {Math.round(props.info.temperature)}
-            <a href="/">F°</a>
-          </strong>
-        </div>
+        <WeatherConvert Fahrenheit={Math.round(props.info.temperature)} />
         <div>{props.info.description}</div>
         <WeatherIcon code={props.info.icon} />
         <div className="windhum">
