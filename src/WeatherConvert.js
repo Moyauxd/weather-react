@@ -32,7 +32,7 @@ export default function WeatherConvert(props) {
       <div c>
         <span className="conTempr">{Math.round(celcius)}</span>
         <span className="TemperatureCon">
-          <a href={"#"} onClick={ShowFah}>
+          <a href={"/"} onClick={ShowFah}>
             °F
           </a>{" "}
           | °C
