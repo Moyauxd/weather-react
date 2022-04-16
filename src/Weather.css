@@ -62,18 +62,17 @@ hr {
 .align {
   text-align: center;
 }
-#cel {
+.TemperatureCon {
   text-decoration: none;
-  border-left: 2px solid black;
-  padding-left: 2px;
+  padding-right: 5px;
+  margin-right: 10px;
   color: black;
   font-weight: bold;
+  position: relative;
+  bottom: 35px;
+  left: 10px;
 }
-#fah {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
+
 .tempr {
   text-align: center;
   padding-top: 20px;
@@ -82,4 +81,11 @@ hr {
   left: 85px;
   color: black;
   font-size: 14px;
+}
+.conTempr {
+  font-size: 45px;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
 }

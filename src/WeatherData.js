@@ -10,7 +10,7 @@ export default function WeatherData(props) {
       <div>
         <h1> {props.info.city}</h1>
         <FormattedDate date={props.info.date} />
-        <WeatherConvert Fahrenheit={Math.round(props.info.temperature)} />
+        <WeatherConvert fahrenheit={Math.round(props.info.temperature)} />
         <div>{props.info.description}</div>
         <WeatherIcon code={props.info.icon} />
         <div className="windhum">
