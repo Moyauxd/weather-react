@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherData from "./WeatherData";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   const [city, Setcity] = useState(props.defaultCity);
@@ -10,6 +11,7 @@ export default function WeatherInfo(props) {
   function displayWeather(response) {
     SetWeatherData({
       ready: true,
+      coord: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       city: response.data.name,
@@ -66,8 +68,11 @@ export default function WeatherInfo(props) {
             <button className="navi" id="navig" onClick={getPosition}>
               <img src="./location.png" alt="locator" width="15px" />
             </button>
+            <div>
+              {" "}
+              <Forecast coords={weatherData.coord} />
+            </div>
           </div>
-          <div className="tempr"></div>
         </div>
       </div>
     );

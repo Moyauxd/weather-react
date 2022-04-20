@@ -1,42 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import ForecastDay from "./ForecastDay.js";
 
-export default function Forecast() {
-  return (
-    <div className="row row-col-4 no-gutters">
-      <div className="col sun ">
-        {" "}
-        <img src="./sun.png" width="65px" alt="sun" />
+export default function Forecast(props) {
+  let [loaded, Setloaded] = useState(false);
+  let [forecast, SetForecast] = useState("");
+
+  function HandleResponse(response) {
+    SetForecast(response.data.daily);
+    Setloaded(true);
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6)
+              return (
+                <div className="col">
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+          })}
+        </div>
       </div>
-      <div className="col cloud">
-        <img src="./cloud.png" width="65px" alt="cloud" />
-      </div>
-      <div className="col wind">
-        <img src="./windy.png" width="65px" alt="windy" />
-      </div>
-      <div className="col rain">
-        <img src="./rain.png" width="65px" alt="rain" />
-      </div>
-      <div className="col snow">
-        <img src="./snow.png" width="65px" alt="snow" />
-      </div>
-      <div className="w-100"></div>
-      <div className="col temp">66°</div>
-      <div className="col temp">70°</div>
-      <div className="col temp">77°</div>
-      <div className="col temp">69°</div>
-      <div className="col temp">40°</div>
-      <div className="w-100"></div>
-      <div className="col">Sunny</div>
-      <div className="col">Cloudy</div>
-      <div className="col">Windy</div>
-      <div className="col">Rain</div>
-      <div className="col">Snow</div>
-      <div className="w-100"></div>
-      <div className="col day">Mon</div>
-      <div className="col day">Tue</div>
-      <div className="col day">Wed</div>
-      <div className="col day">Thu</div>
-      <div className="col day">Fri</div>
-    </div>
-  );
+    );
+  } else {
+    let lat = props.coords.lat;
+    let long = props.coords.lon;
+    let apiKey = "9f6f50a66dc71bc0ef80ae63daf439c6";
+    let forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+    axios.get(forecastUrl).then(HandleResponse);
+  }
+  return null;
 }
