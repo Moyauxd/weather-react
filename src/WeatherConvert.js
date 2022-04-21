@@ -29,7 +29,7 @@ export default function WeatherConvert(props) {
   } else {
     let celcius = ((props.fahrenheit - 32) * 5) / 9;
     return (
-      <div c>
+      <div>
         <span className="conTempr">{Math.round(celcius)}</span>
         <span className="TemperatureCon">
           <a href={"/"} onClick={ShowFah}>
